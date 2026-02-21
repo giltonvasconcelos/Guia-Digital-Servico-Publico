@@ -31,12 +31,14 @@ Canais no YouTube com conteúdo confiável e atualizado para quem prefere aprend
 *   **[Série "Entendendo a LGPD" - Senado Federal] (https://www.youtube.com/user/senadofederal/search?query=lgpd)** – Vídeos didáticos produzidos pelo Senado para explicar a lei.
 
 ### 🏛️ Foco no Setor Público
-*   **[LGPD na Prática para o Serviço Público - TCU] (https://www.youtube.com/playlist?list=PLnRVmwBQnAqY4U4BvRqXK9K9Q9Q9Q9Q9)** – Playlist do Tribunal de Contas da União com conteúdos focados na aplicação da lei na administração pública.
+*   **[Aprendizágil - Conhecimento relevante de maneira ágil e prática a todos, para rápido aprimoramento pessoal e profissional em temas específicos.] (https://youtube.com/playlist?list=PLCDO8oMmhbxuKuEpak7tyFk6MgUC04sVy&si=K8Ci54iprFmjAPBo)** – Playlist do Tribunal de Contas da União com conteúdos focados na aplicação da lei na administração pública.
 *   **[Conteúdos sobre LGPD - Canal Enap] (https://www.youtube.com/@enapgovbr)** – A Escola Nacional de Administração Pública oferece webinars e aulas sobre o tema.
 
 ### 💻 Conteúdo Técnico
-*   **[Impactos da LGPD no Desenvolvimento de Software - Alura] (https://www.youtube.com/watch?v=7T_E9rLp0Yk)** – Aborda como a lei muda a forma de desenvolver e pensar em privacidade desde a concepção.
-*   **[Canal Rocketseat] (https://www.youtube.com/@rocketseat)** – Utilize a busca do canal por "LGPD" para encontrar conteúdos práticos e atualizados, incluindo séries sobre o tema.
+*   **[Digital GOVBR] (https://youtube.com/@digitalgovbr?si=Atr_-vwcsLdzw1Lo)** – Aborda como a lei muda a forma de desenvolver e pensar em privacidade desde a concepção.
+
+*   
+*   **[Semana da Proteção de Dados Pessoais] ([https://www.youtube.com/@rocketseat](https://youtube.com/playlist?list=PLWiiz1AbXMPbocJmgmf_jKoPFG21Cb6Jb&si=33agDOfGPvLOovCI))** – Utilize a busca do canal por "LGPD" para encontrar conteúdos práticos e atualizados, incluindo séries sobre o tema.
 
 ---
 
