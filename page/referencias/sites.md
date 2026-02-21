@@ -26,13 +26,10 @@ Se você é desenvolvedor ou trabalha com sistemas, estes links abordam a LGPD d
 Canais no YouTube com conteúdo confiável e atualizado para quem prefere aprender de forma visual.
 
 ### 📺 Introdução e Visão Geral
-*   **[Canal Oficial da ANPD no YouTube] (https://www.youtube.com/@anpd_oficial)** – Playlists e vídeos institucionais diretamente da autoridade nacional. A fonte mais confiável.
-*   **[LGPD para Programadores - Código Fonte TV] (https://www.youtube.com/watch?v=Q6c0VjJfR7M)** – Explicação clara e descontraída sobre a LGPD com foco no público de tecnologia.
-*   **[Série "Entendendo a LGPD" - Senado Federal] (https://www.youtube.com/user/senadofederal/search?query=lgpd)** – Vídeos didáticos produzidos pelo Senado para explicar a lei.
-
+*   **[Canal Oficial da ANPD no YouTube] (https://www.youtube.com/@anpdgov)** – Playlists e vídeos institucionais diretamente da autoridade nacional. A fonte mais confiável.
 ### 🏛️ Foco no Setor Público
 *   **[Aprendizágil - Conhecimento relevante de maneira ágil e prática a todos, para rápido aprimoramento pessoal e profissional em temas específicos.] (https://youtube.com/playlist?list=PLCDO8oMmhbxuKuEpak7tyFk6MgUC04sVy&si=K8Ci54iprFmjAPBo)** – Playlist do Tribunal de Contas da União com conteúdos focados na aplicação da lei na administração pública.
-*   **[Conteúdos sobre LGPD - Canal Enap] (https://www.youtube.com/@enapgovbr)** – A Escola Nacional de Administração Pública oferece webinars e aulas sobre o tema.
+*   **[Conteúdos sobre LGPD - Canal Enap] (https://www.youtube.com/@canalenap)** – A Escola Nacional de Administração Pública oferece webinars e aulas sobre o tema.
 
 ### 💻 Conteúdo Técnico
 *   **[Digital GOVBR] (https://youtube.com/@digitalgovbr?si=Atr_-vwcsLdzw1Lo)** – Aborda como a lei muda a forma de desenvolver e pensar em privacidade desde a concepção.
