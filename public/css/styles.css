@@ -1,13 +1,44 @@
+/* Código otimizado para seu GitHub Pages */
 .docsify-pagination-container,
 h2 {
   border: none !important;
 }
-/* Para projetos Docsify e modernos que usam variáveis */
+
+/* Aumentar sidebar */
 :root {
-  --_sidebar-width: 400px; /* Altere este valor para o tamanho desejado */
+  --sidebar-width: 400px;
+  --_sidebar-width: 400px;
 }
 
-/* Para temas que usam classes fixas (Jekyll/Outros) */
-._sidebar, .side-bar, aside {
+.sidebar {
   width: 400px !important;
+}
+
+.content {
+  margin-left: 400px !important;
+}
+
+/* Quando sidebar estiver oculta (seu botão ☰) */
+.sidebar-hidden .sidebar {
+  transform: translateX(-400px) !important;
+}
+
+.sidebar-hidden .content {
+  margin-left: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 280px;
+    --_sidebar-width: 280px;
+  }
+  
+  .sidebar {
+    width: 280px !important;
+  }
+  
+  .sidebar-hidden .sidebar {
+    transform: translateX(-280px) !important;
+  }
 }
