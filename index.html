@@ -14,13 +14,13 @@
       --primary: #1a3b5d;
       --primary-dark: #0f2a44;
       --accent: #ffd966;
-      --_slidebar-width: 350px;
+      --__sidebar-width: 350px;
     }
 
     /* ===== SIDEBAR ===== */
-    .__slidebar {
+    .___sidebar {
       background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
-      width: var(--__slidebar-width) !important;
+      width: var(--___sidebar-width) !important;
       transition: transform 0.3s ease !important;
       position: fixed !important;
       left: 0;
@@ -31,18 +31,18 @@
     }
 
     /* Sidebar oculta */
-    ._slidebar-hidden ._slidebar {
-      transform: translateX(calc(-1 * var(--_slidebar-width))) !important;
+    .__sidebar-hidden .__sidebar {
+      transform: translateX(calc(-1 * var(--__sidebar-width))) !important;
     }
 
-    ._slidebar-hidden .content {
+    .__sidebar-hidden .content {
       margin-left: 0 !important;
     }
 
     /* Ajuste do conteúdo principal */
     .content {
       transition: margin-left 0.3s ease !important;
-      margin-left: var(--_slidebar-width) !important;
+      margin-left: var(--__sidebar-width) !important;
     }
 
     /* ===== BOTÃO DE MENU ===== */
@@ -71,8 +71,8 @@
       transform: scale(1.1);
     }
 
-    /* Botão quando _slidebar está oculta */
-    ._slidebar-hidden .menu-toggle {
+    /* Botão quando __sidebar está oculta */
+    .__sidebar-hidden .menu-toggle {
       left: 20px;
       background: var(--accent);
       color: var(--primary);
@@ -105,30 +105,30 @@
     }
 
     /* ===== PERSONALIZAÇÃO DA SIDEBAR ===== */
-    ._slidebar .app-name {
+    .__sidebar .app-name {
       background: rgba(0, 0, 0, 0.3) !important;
       padding: 30px 20px !important;
       border-bottom: 3px solid var(--accent) !important;
       text-align: center;
     }
 
-    ._slidebar .app-name a {
+    .__sidebar .app-name a {
       color: white !important;
       font-size: 1.5rem !important;
       text-decoration: none;
     }
 
-    ._slidebar .app-name a span {
+    .__sidebar .app-name a span {
       font-weight: 700;
       color: var(--accent);
     }
 
-    ._slidebar ._slidebar-nav {
+    .__sidebar .__sidebar-nav {
       padding: 20px 15px !important;
     }
 
     /* Títulos dos módulos */
-    ._slidebar ul li p {
+    .__sidebar ul li p {
       color: var(--accent) !important;
       font-weight: 700 !important;
       font-size: 1.1rem !important;
@@ -140,7 +140,7 @@
     }
 
     /* Itens do menu */
-    ._slidebar ul li a {
+    .__sidebar ul li a {
       color: rgba(255, 255, 255, 0.9) !important;
       border-left: 4px solid transparent !important;
       padding: 12px 15px 12px 25px !important;
@@ -150,14 +150,14 @@
       border-radius: 0 8px 8px 0 !important;
     }
 
-    ._slidebar ul li a:hover {
+    .__sidebar ul li a:hover {
       color: var(--accent) !important;
       border-left-color: var(--accent) !important;
       background: rgba(255, 215, 0, 0.15) !important;
       padding-left: 35px !important;
     }
 
-    ._slidebar ul li.active > a {
+    .__sidebar ul li.active > a {
       color: var(--accent) !important;
       border-left-color: var(--accent) !important;
       background: rgba(255, 215, 0, 0.2) !important;
@@ -179,7 +179,7 @@
     }
 
     /* ===== BOTÃO DE FECHAR NA SIDEBAR ===== */
-    .close-_slidebar {
+    .close-__sidebar {
       display: none;
       position: absolute;
       top: 20px;
@@ -198,14 +198,14 @@
 
     /* Mostrar botão de fechar apenas em mobile */
     @media (max-width: 768px) {
-      .close-_slidebar {
+      .close-__sidebar {
         display: flex;
       }
     }
 
     /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 768px) {
-      ._slidebar {
+      .__sidebar {
         width: 280px !important;
       }
       
@@ -235,15 +235,15 @@
     🏠
   </div>
 
-  <!-- Botão de fechar na _slidebar (para mobile) -->
-  <div class="close-_slidebar" onclick="toggleSidebar()">✕</div>
+  <!-- Botão de fechar na __sidebar (para mobile) -->
+  <div class="close-__sidebar" onclick="toggleSidebar()">✕</div>
 
   <script>
     // CONFIGURAÇÃO DO DOCSIFY
     window.$docsify = {
       name: '<span>Proteção</span> de Dados',
       repo: '',
-      loadSidebar: '_slidebar.md',
+      loadSidebar: '__sidebar.md',
       subMaxLevel: 3,
       auto2top: true,
       relativePath: true,
@@ -255,34 +255,34 @@
         noData: 'Nada encontrado'
       },
       
-      // Plugin para atualizar estado da _slidebar
+      // Plugin para atualizar estado da __sidebar
       plugins: [
         function(hook, vm) {
           hook.doneEach(function() {
-            // Fecha _slidebar em mobile após clicar em um link
+            // Fecha __sidebar em mobile após clicar em um link
             if (window.innerWidth <= 768) {
-              document.body.classList.add('_slidebar-hidden');
+              document.body.classList.add('__sidebar-hidden');
             }
             
-            // Adiciona botão de fechar na _slidebar
-            const _slidebar = document.querySelector('._slidebar');
-            if (_slidebar && !_slidebar.querySelector('.close-_slidebar')) {
+            // Adiciona botão de fechar na __sidebar
+            const __sidebar = document.querySelector('.__sidebar');
+            if (__sidebar && !__sidebar.querySelector('.close-__sidebar')) {
               const closeBtn = document.createElement('div');
-              closeBtn.className = 'close-_slidebar';
+              closeBtn.className = 'close-__sidebar';
               closeBtn.innerHTML = '✕';
               closeBtn.onclick = toggleSidebar;
-              _slidebar.appendChild(closeBtn);
+              __sidebar.appendChild(closeBtn);
             }
           });
         }
       ]
     };
 
-    // Função para alternar _slidebar
+    // Função para alternar __sidebar
     function toggleSidebar() {
-      document.body.classList.toggle('_slidebar-hidden');
-      const hidden = document.body.classList.contains('_slidebar-hidden');
-      localStorage.setItem('_slidebar-hidden', hidden);
+      document.body.classList.toggle('__sidebar-hidden');
+      const hidden = document.body.classList.contains('__sidebar-hidden');
+      localStorage.setItem('__sidebar-hidden', hidden);
       
       // Muda o ícone do botão de menu
       const menuToggle = document.getElementById('menuToggle');
@@ -294,23 +294,23 @@
       window.location.hash = '#/';
     }
 
-    // Estado inicial da _slidebar
+    // Estado inicial da __sidebar
     document.addEventListener('DOMContentLoaded', function() {
-      const hidden = localStorage.getItem('_slidebar-hidden') === 'true';
+      const hidden = localStorage.getItem('__sidebar-hidden') === 'true';
       if (hidden) {
-        document.body.classList.add('_slidebar-hidden');
+        document.body.classList.add('__sidebar-hidden');
         document.getElementById('menuToggle').innerHTML = '☰';
       } else {
         document.getElementById('menuToggle').innerHTML = '✕';
       }
     });
 
-    // Fecha _slidebar ao clicar em links no mobile
+    // Fecha __sidebar ao clicar em links no mobile
     document.addEventListener('click', function(e) {
       if (window.innerWidth <= 768) {
-        if (e.target.tagName === 'A' && !document.body.classList.contains('_slidebar-hidden')) {
+        if (e.target.tagName === 'A' && !document.body.classList.contains('__sidebar-hidden')) {
           setTimeout(() => {
-            document.body.classList.add('_slidebar-hidden');
+            document.body.classList.add('__sidebar-hidden');
             document.getElementById('menuToggle').innerHTML = '☰';
           }, 300);
         }
