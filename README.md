@@ -1,31 +1,69 @@
-# Guia básico LGPD
+# 🔐 Guia de Proteção de Dados para o Setor Público
 
-Um Guia básico sobre a LGPD (Lei Geral de Proteção de Dados). Lei 13.709/2018 que entrou em vigor no Brasil dia 18/09/2020.
+<div class="info">
+📌 Versão 1.0 • Material atualizado em Fevereiro/2026
+</div>
 
-## Como executar o projeto
+Bem-vindo ao guia completo sobre **Segurança da Informação, LGPD, LAI e Inovação** no serviço público. Este material foi desenvolvido para auxiliar servidores públicos a compreender e aplicar as melhores práticas de proteção de dados.
 
-Para você rodar o projeto localmente você deve instalar o [node](https://nodejs.org/en/) e o [docsify](https://docsify.js.org/).
-Após fazer as instalações, vá até a pasta do projeto e digite o comando:
+## 🎯 Navegação
 
-```
-docsify serve
-```
+<div class="card">
+<h3>📌 Como usar este guia</h3>
 
-O projeto abrirá na porta **3000** e após isso é só acessar **localhost:3000** pelo seu navegador.
+| O que fazer | Como funciona |
+|-------------|---------------|
+| **📖 Navegar pelos módulos** | Clique nos itens da barra lateral esquerda |
+| **🔍 Pesquisar conteúdo** | Use o campo de busca no topo da sidebar |
+| **📱 Recolher/Expandir menu** | Botão ◀ ▶ no canto inferior esquerdo |
+| **🏠 Voltar ao início** | Botão 🏠 no canto inferior direito |
+</div>
 
-## Como contribuir para o projeto
+## 📋 Módulos disponíveis
 
-1. Realize um fork do projeto.
-2. Crie uma branch com a nova feature.
-3. Realize o commit das informações.
-4. Abra um pull request.
+### [🔒 Módulo 1: Segurança da Informação](pages/modulo1-seguranca/fundamentos.md)
+> Fundamentos, ameaças, boas práticas e governança de SI no setor público.
 
-## Contribuidores
+**Tópicos:** Fundamentos | Ameaças | Boas Práticas | Incidentes | Governança
 
-- [Niag Alves](https://github.com/niagalves);
+### [📘 Módulo 2: LGPD](pages/modulo2-lgpd/introducao.md)
+> Lei Geral de Proteção de Dados aplicada ao serviço público.
 
-<p align="center">
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
-  </a>
-</p>
+**Tópicos:** Introdução | Dados Pessoais | Dados Anonimizados | Dados Públicos | Agentes | Princípios | Direitos | Fiscalização | Boas Práticas | GDPR
+
+### [📢 Módulo 3: LAI](pages/modulo3-lai/introducao.md)
+> Lei de Acesso à Informação e sua relação com a proteção de dados.
+
+**Tópicos:** Introdução | Direitos do Cidadão | Obrigações | Limites | LGPD x LAI | Recursos
+
+### [💡 Módulo 4: Inovação](pages/modulo4-inovacao/transformacao-digital.md)
+> Novas tecnologias e o futuro da proteção de dados.
+
+**Tópicos:** Transformação Digital | Tecnologias Emergentes | Privacidade | Ética | Casos de Sucesso | Futuro
+
+<div class="tip">
+💡 **Dica:** Comece pelo Módulo 1 para construir uma base sólida antes de avançar para os demais.
+</div>
+
+<div class="warning">
+⚠️ **Importante:** Este guia é material de apoio. Consulte sempre a legislação vigente e orientações oficiais dos órgãos competentes.
+</div>
+
+## 📊 Progresso do Guia
+
+| Módulo | Status | Tópicos |
+|--------|--------|---------|
+| 🔒 Segurança da Informação | ✅ Completo | 5/5 |
+| 📘 LGPD | ✅ Completo | 10/10 |
+| 📢 LAI | ✅ Completo | 6/6 |
+| 💡 Inovação | ✅ Completo | 6/6 |
+
+## 🚀 Iniciar navegação
+
+👉 [**Clique aqui para começar pelo Módulo 1**](pages/modulo1-seguranca/fundamentos.md)
+
+---
+
+<div class="success">
+✅ **Total:** 27 tópicos disponíveis para consulta
+</div>
