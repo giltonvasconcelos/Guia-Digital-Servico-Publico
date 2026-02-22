@@ -6,7 +6,7 @@
 - **Site oficial:** [www.gov.br/anpd](https://www.gov.br/anpd) ✅ ATIVO
 - **Conteúdo:** Legislação, guias, fiscalização, comunicados
 - **Destaque:** Seção "Perguntas Frequentes" e "Materiais Educativos"
-- **YouTube:** [@ANPDGovBr](https://www.youtube.com/@ANPDGovBr) - Lives, webinars e cursos
+- **YouTube:** [@ANPDGovBr](https://www.youtube.com/@anpdgov) - Lives, webinars e cursos
 
 ### Controladoria-Geral da União (CGU)
 - **Site oficial:** [www.gov.br/cgu](https://www.gov.br/cgu) ✅ ATIVO
