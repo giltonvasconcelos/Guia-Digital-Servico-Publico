@@ -1,0 +1,34 @@
+# 🤝 LGPD x LAI: Como Conciliar?
+
+A **Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)** e a **Lei de Acesso à Informação (LAI - Lei nº 12.527/2011)** devem ser aplicadas de forma complementar, equilibrando **transparência** e **privacidade**.
+
+---
+
+## 📌 Pontos de Convergência
+
+- A LAI garante acesso às informações públicas.  
+- A LGPD protege dados pessoais e sensíveis.  
+- Ambas reforçam a ideia de que **informação é um direito**, mas deve ser tratada com responsabilidade.  
+
+---
+
+## 📌 Conflitos e Soluções
+
+- **Divulgação de salários de servidores**: permitido pela LAI, mas sem dados pessoais como CPF ou endereço (LGPD).  
+- **Contratos públicos**: devem ser publicados, mas dados pessoais de contratados devem ser anonimizados.  
+- **Relatórios de saúde pública**: podem ser divulgados, mas sem identificação individual.  
+
+---
+
+## 📌 Boas Práticas
+
+- Adotar **anonimização** e **pseudonimização** de dados.  
+- Garantir que sistemas de transparência respeitem a privacidade.  
+- Treinar servidores para aplicar corretamente ambas as leis.  
+
+---
+
+## 📚 Referências
+
+- [Lei nº 12.527/2011 - LAI](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm)  
+- [Lei nº 13.709/2018 - LGPD](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm)  
