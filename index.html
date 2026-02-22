@@ -9,112 +9,44 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
   <style>
-    /* ===== VARIÁVEIS ===== */
-    :root {
-      --primary: #1a3b5d;
-      --primary-dark: #0f2a44;
-      --accent: #ffd966;
-      --accent-light: #ffe599;
-      --sidebar-width: 350px;
-    }
-
-    /* ===== SIDEBAR PERSONALIZADA ===== */
+    /* Sidebar personalizada */
     .sidebar {
-      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
-      width: var(--sidebar-width) !important;
-      transition: transform 0.3s ease !important;
-      box-shadow: 4px 0 15px rgba(0,0,0,0.2) !important;
+      background: linear-gradient(180deg, #1a3b5d 0%, #0f2a44 100%) !important;
     }
-
-    .sidebar .sidebar-nav {
-      padding: 20px 15px !important;
+    
+    .sidebar ul li a {
+      color: rgba(255,255,255,0.9) !important;
+      border-left: 3px solid transparent;
     }
-
-    /* Cabeçalho da Sidebar */
+    
+    .sidebar ul li a:hover {
+      color: #ffd966 !important;
+      border-left-color: #ffd966;
+      background: rgba(255,215,0,0.1);
+    }
+    
+    .sidebar ul li.active > a {
+      color: #ffd966 !important;
+      border-left-color: #ffd966;
+      background: rgba(255,215,0,0.15);
+    }
+    
     .sidebar .app-name {
-      background: rgba(0, 0, 0, 0.3) !important;
-      padding: 20px 15px !important;
-      border-bottom: 3px solid var(--accent) !important;
+      background: rgba(0,0,0,0.2);
+      border-bottom: 3px solid #ffd966;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
     }
-
+    
     .sidebar .app-name a {
       color: white !important;
-      font-size: 1.3rem !important;
-      font-weight: 300 !important;
-      text-decoration: none;
     }
-
+    
     .sidebar .app-name a span {
-      font-weight: 700;
-      color: var(--accent);
+      color: #ffd966;
+      font-weight: bold;
     }
-
-    /* Títulos dos módulos */
-    .sidebar ul li p {
-      color: var(--accent) !important;
-      font-weight: 700 !important;
-      font-size: 1.1rem !important;
-      margin: 25px 0 10px 0 !important;
-      padding: 8px 0 5px 10px !important;
-      border-bottom: 2px solid rgba(255, 215, 0, 0.3) !important;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      background: rgba(255, 215, 0, 0.1);
-    }
-
-    /* Itens do menu */
-    .sidebar ul li a {
-      color: rgba(255, 255, 255, 0.9) !important;
-      border-left: 4px solid transparent !important;
-      padding: 12px 15px 12px 25px !important;
-      margin: 3px 0 !important;
-      transition: all 0.3s !important;
-      font-size: 0.95rem !important;
-    }
-
-    .sidebar ul li a:hover {
-      color: var(--accent) !important;
-      border-left-color: var(--accent) !important;
-      background: rgba(255, 215, 0, 0.15) !important;
-      padding-left: 35px !important;
-    }
-
-    .sidebar ul li.active > a {
-      color: var(--accent) !important;
-      border-left-color: var(--accent) !important;
-      background: rgba(255, 215, 0, 0.2) !important;
-      font-weight: 600 !important;
-    }
-
-    /* ===== CONTEÚDO PRINCIPAL ===== */
-    .content {
-      transition: margin-left 0.3s ease !important;
-      margin-left: var(--sidebar-width) !important;
-    }
-
-    .markdown-section {
-      max-width: 1000px !important;
-      padding: 40px 50px !important;
-      margin: 30px auto !important;
-    }
-
-    .markdown-section h1 {
-      color: var(--primary) !important;
-      border-bottom: 4px solid var(--accent) !important;
-      padding-bottom: 15px !important;
-      margin-bottom: 30px !important;
-    }
-
-    .markdown-section h2 {
-      color: var(--primary-dark) !important;
-      margin-top: 45px !important;
-    }
-
-    /* ===== BOTÕES ===== */
+    
+    /* Botões de controle */
     .control-buttons {
       position: fixed;
       bottom: 30px;
@@ -123,7 +55,7 @@
       gap: 15px;
       z-index: 1000;
     }
-
+    
     .control-btn {
       width: 55px;
       height: 55px;
@@ -133,60 +65,34 @@
       justify-content: center;
       cursor: pointer;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      transition: all 0.3s;
       border: 2px solid white;
       font-size: 1.4rem;
-    }
-
-    .home-btn {
-      background: var(--primary);
+      background: #1a3b5d;
       color: white;
+      transition: all 0.3s;
     }
-
-    .home-btn:hover {
-      background: var(--primary-dark);
+    
+    .control-btn:hover {
       transform: translateY(-5px) scale(1.1);
+      background: #0f2a44;
     }
-
+    
     .toggle-btn {
-      background: var(--accent);
-      color: var(--primary);
+      background: #ffd966;
+      color: #1a3b5d;
     }
-
+    
     .toggle-btn:hover {
-      background: var(--accent-light);
-      transform: translateY(-5px) scale(1.1);
+      background: #ffe599;
     }
-
-    /* Estado colapsado */
+    
+    /* Sidebar colapsável */
     body.sidebar-collapsed .sidebar {
-      transform: translateX(calc(-1 * var(--sidebar-width))) !important;
+      transform: translateX(-100%) !important;
     }
-
+    
     body.sidebar-collapsed .content {
       margin-left: 0 !important;
-    }
-
-    /* ===== TIPOGRAFIA ESPECIAL ===== */
-    .tip, .warning, .info {
-      padding: 20px 25px !important;
-      border-radius: 12px !important;
-      margin: 30px 0 !important;
-    }
-
-    .tip {
-      background: #e3f2fd !important;
-      border-left: 6px solid #1976d2 !important;
-    }
-
-    .warning {
-      background: #fff3e0 !important;
-      border-left: 6px solid #f57c00 !important;
-    }
-
-    .info {
-      background: #e8f5e9 !important;
-      border-left: 6px solid #388e3c !important;
     }
   </style>
 </head>
@@ -200,85 +106,47 @@
   </div>
 
   <script>
-    // CONFIGURAÇÃO PRINCIPAL DO DOCSIFY
+    // Configuração do Docsify - VERSÃO SIMPLIFICADA
     window.$docsify = {
-      // Nome do site
       name: '<span>Proteção</span> de Dados',
-      
-      // Arquivo de sidebar
-      loadSidebar: 'sidebar.md',
-      
-      // Arquivo inicial
+      repo: '',
+      loadSidebar: '_sidebar.md',  // Arquivo com underscore
+      subMaxLevel: 3,
+      auto2top: true,
+      relativePath: true,
       homepage: 'README.md',
       
-      // Nível máximo de sub-items
-      subMaxLevel: 3,
-      
-      // Auto rolar para o topo
-      auto2top: true,
-      
-      // Caminhos relativos (importante para a pasta pages)
-      relativePath: true,
-      
-      // Habilitar busca
+      // Configuração de busca
       search: {
-        maxAge: 86400000,
-        paths: 'auto',
         placeholder: '🔍 Pesquisar...',
-        noData: 'Nenhum resultado encontrado',
-        depth: 4
-      },
-      
-      // Roteamento - Configuração crucial para encontrar pages/
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
-      
-      // Plugins
-      plugins: [
-        function(hook, vm) {
-          hook.doneEach(function() {
-            // Recupera estado da sidebar
-            const collapsed = localStorage.getItem('sidebar-collapsed') === 'true';
-            if (collapsed) {
-              document.body.classList.add('sidebar-collapsed');
-              document.getElementById('toggleBtn').innerHTML = '▶';
-            } else {
-              document.body.classList.remove('sidebar-collapsed');
-              document.getElementById('toggleBtn').innerHTML = '◀';
-            }
-          });
-        }
-      ]
+        noData: 'Nada encontrado'
+      }
     };
 
-    // Função para alternar sidebar
+    // Funções de controle
     function toggleSidebar() {
       document.body.classList.toggle('sidebar-collapsed');
       const collapsed = document.body.classList.contains('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', collapsed);
-      
-      const btn = document.getElementById('toggleBtn');
-      btn.innerHTML = collapsed ? '▶' : '◀';
+      document.getElementById('toggleBtn').innerHTML = collapsed ? '▶' : '◀';
     }
 
-    // Função para ir ao menu principal
     function goHome() {
       window.location.hash = '#/';
     }
 
-    // Inicializa seta da sidebar
+    // Estado inicial da sidebar
     document.addEventListener('DOMContentLoaded', function() {
       const collapsed = localStorage.getItem('sidebar-collapsed') === 'true';
-      document.getElementById('toggleBtn').innerHTML = collapsed ? '▶' : '◀';
+      if (collapsed) {
+        document.body.classList.add('sidebar-collapsed');
+        document.getElementById('toggleBtn').innerHTML = '▶';
+      }
     });
   </script>
 
   <!-- Scripts do Docsify -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  
-  <!-- Plugins -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/emoji.min.js"></script>
 </body>
