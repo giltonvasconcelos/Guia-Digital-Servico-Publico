@@ -98,3 +98,27 @@ A **Autoridade Nacional de Proteção de Dados (ANPD)** é o órgão da administ
 | **Eliminação** | Descartar após prazo legal |
 
 ### Ciclo de vida do dado
+Coleta → Armazenamento → Uso → Compartilhamento → Eliminação
+↑ ↓
+└─────────────── Ciclo contínuo ────────────────┘
+
+## ✅ Princípios aplicáveis ao setor público
+
+### No serviço público, o tratamento deve observar:
+- **Finalidade específica:** Vinculado a políticas públicas
+- **Base legal adequada:** Geralmente cumprimento de obrigação legal
+- **Transparência:** Cidadão deve saber como seus dados são usados
+- **Segurança:** Medidas proporcionais aos riscos
+- **Não discriminação:** Evitar usos que gerem preconceito
+
+## 📌 Pontos de atenção para servidores
+
+- [ ] Coletar apenas dados **necessários** para a finalidade
+- [ ] Informar ao cidadão **para que** os dados serão usados
+- [ ] Garantir **segurança** no armazenamento
+- [ ] Registrar **compartilhamentos** com outros órgãos
+- [ ] Atender solicitações de **titulares** (acesso, correção, exclusão)
+- [ ] Reportar **incidentes** imediatamente
+
+**[⬆ Voltar ao topo](#)**
+
