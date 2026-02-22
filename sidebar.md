@@ -1,71 +1,34 @@
-- Introdução
+* **🔒 MÓDULO 1: SEGURANÇA DA INFORMAÇÃO**
+  * [🔐 Fundamentos de Segurança](pages/modulo1-seguranca/fundamentos.md)
+  * [⚠️ Principais Ameaças](pages/modulo1-seguranca/ameacas.md)
+  * [👤 Boas Práticas](pages/modulo1-seguranca/boas-praticas.md)
+  * [🚨 Gestão de Incidentes](pages/modulo1-seguranca/incidentes.md)
+  * [🏛️ Governança](pages/modulo1-seguranca/governanca.md)
 
-  - [O que é LGPD?](page/introducao/o-que-e-lgpd.md)
-  - [Por que a LGPD é tão importante?](page/introducao/por-que-a-lgpd-e-tao-importante.md)
-  - [O que é ANPD?](page/introducao/o-que-e-anpd.md)
-  - [O que a lei considera como tratamento de dados?](page/introducao/o-que-a-lei-considera-como-tratamento-de-dados.md)
+* **📘 MÓDULO 2: LGPD**
+  * [📘 Introdução](pages/modulo2-lgpd/introducao.md)
+  * [👥 Dados Pessoais](pages/modulo2-lgpd/dados-pessoais.md)
+  * [🔢 Dados Anonimizados](pages/modulo2-lgpd/dados-anonimizados.md)
+  * [🌐 Dados Públicos](pages/modulo2-lgpd/dados-publicos.md)
+  * [⚙️ Agentes](pages/modulo2-lgpd/agentes.md)
+  * [📋 Princípios](pages/modulo2-lgpd/principios.md)
+  * [🔑 Direitos](pages/modulo2-lgpd/direitos.md)
+  * [⚖️ Fiscalização](pages/modulo2-lgpd/fiscalizacao.md)
+  * [🛡️ Boas Práticas](pages/modulo2-lgpd/governanca.md)
+  * [🇪🇺 LGPD x GDPR](pages/modulo2-lgpd/gdpr.md)
 
-- Dados pessoais
+* **📢 MÓDULO 3: LAI**
+  * [📢 Introdução](pages/modulo3-lai/introducao.md)
+  * [👥 Direitos do Cidadão](pages/modulo3-lai/direitos.md)
+  * [🏢 Obrigações](pages/modulo3-lai/obrigacoes.md)
+  * [🔒 Limites](pages/modulo3-lai/limites.md)
+  * [🤝 LGPD x LAI](pages/modulo3-lai/conciliacao.md)
+  * [🔄 Recursos](pages/modulo3-lai/recursos.md)
 
-  - [O que são dados pessoais?](page/dados-pessoais/o-que-sao-dados-pessoais.md)
-  - [Todos os dados são considerados pessoais?](page/dados-pessoais/todos-os-dados-sao-considerados-pessoais.md)
-  - [Como funciona o tratamento de dados?](page/dados-pessoais/como-funciona-o-tratamento-de-dados.md)
-  - [O que são dados pessoais sensíveis?](page/dados-pessoais/o-que-sao-dados-pessoais-sensiveis.md)
-
-- Dados anonimizados
-
-  - [O que são dados anonimizados?](page/dados-anonimizados/o-que-sao-dados-anonimizados.md)
-
-- Dados públicos
-
-  - [O que são dados públicos?](page/dados-publicos/o-que-sao-dados-publicos.md)
-
-- Controlador, operador e encarregado
-
-  - [O que são controlador?](page/controlador-operador-encarregado/o-que-sao-controlador.md)
-  - [O que são operador?](page/controlador-operador-encarregado/o-que-sao-operador.md)
-  - [O que são encarregado?](page/controlador-operador-encarregado/o-que-sao-encarregado.md)
-  - [Diferença de operador e controlador](page/controlador-operador-encarregado/diferenca-de-operador-e-controlador.md)
-
-- Os 10 princípios da LGPD
-
-  - [Introdução](page/os-10-principios-da-lgpd/introducao.md)
-  - [Finalidade](page/os-10-principios-da-lgpd/finalidade.md)
-  - [Adequação](page/os-10-principios-da-lgpd/adequacao.md)
-  - [Necessidade](page/os-10-principios-da-lgpd/necessidade.md)
-  - [Livre acesso](page/os-10-principios-da-lgpd/livre-acesso.md)
-  - [Qualidade dos dados](page/os-10-principios-da-lgpd/qualidade-dos-dados.md)
-  - [Transparência](page/os-10-principios-da-lgpd/transparencia.md)
-  - [Segurança](page/os-10-principios-da-lgpd/seguranca.md)
-  - [Prevenção](page/os-10-principios-da-lgpd/prevencao.md)
-  - [Não discriminação](page/os-10-principios-da-lgpd/nao-discriminacao.md)
-  - [Não Responsabilidade e prestação de contas](page/os-10-principios-da-lgpd/responsabilidade-e-prestacao-de-contas.md)
-
-- Direitos dos titulares de dados
-
-  - [Confirmar](page/direitos-dos-titulares-de-dados/confirmar.md)
-  - [Acessar](page/direitos-dos-titulares-de-dados/acessar.md)
-  - [Corrigir](page/direitos-dos-titulares-de-dados/corrigir.md)
-  - [Restrição](page/direitos-dos-titulares-de-dados/restricao.md)
-  - [Portabilidade](page/direitos-dos-titulares-de-dados/portabilidade.md)
-  - [Eliminação](page/direitos-dos-titulares-de-dados/eliminacao.md)
-  - [Informação](page/direitos-dos-titulares-de-dados/informacao.md)
-  - [Revogação do consentimento](page/direitos-dos-titulares-de-dados/revogacao.md)
-  - [Revisão às decisões automatizadas](page/direitos-dos-titulares-de-dados/revisao-as-decisoes-automatizadas.md)
-
-- Fiscalização, sanções e penalidades
-
-  - [Resumo](page/fiscalizacao-sancoes-e-penalidades/resumo.md)
-  - [Exemplo de penalidade](page/fiscalizacao-sancoes-e-penalidades/exemplo-de-penalidade.md)
-  - [Âmbito de aplicação](page/fiscalizacao-sancoes-e-penalidades/ambito-de-aplicacao.md)
-  - [Segurança de dados pessoais, governança e boas práticas](page/fiscalizacao-sancoes-e-penalidades/seguranca-de-dados-pessoais-governanca-e-boas-praticas.md)
-
-- LGPD X GDPR
-
-  - [O que é GDPR?](page/gdpr/o-que-e-gdpr.md)
-  - [Quais as diferenças entre LGPD e GDPR?](page/gdpr/diferencas-entre-lgpd-e-gdpr.md)
-  - [Quem deve se adequar a GDPR?](page/gdpr/quem-deve-se-adequar-na-gdpr.md)
-
-- Referências
-
-  - [Sites](page/referencias/sites.md)
+* **💡 MÓDULO 4: INOVAÇÃO**
+  * [💡 Transformação Digital](pages/modulo4-inovacao/transformacao-digital.md)
+  * [🤖 Tecnologias](pages/modulo4-inovacao/tecnologias.md)
+  * [🔐 Privacidade](pages/modulo4-inovacao/privacidade.md)
+  * [⚖️ Ética](pages/modulo4-inovacao/etica.md)
+  * [🏆 Casos de Sucesso](pages/modulo4-inovacao/casos.md)
+  * [🚀 Futuro](pages/modulo4-inovacao/futuro.md)
