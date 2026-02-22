@@ -24,7 +24,7 @@ Este guia reúne os principais temas que sustentam essa jornada:
 - **Aplicação prática**: controle de acessos, criptografia, backup e resposta a incidentes.  
 - **Exemplos**: portais governamentais com autenticação segura, sistemas antifraude em benefícios sociais.  
 
-➡️ [Acesse o módulo completo](./FISCALIZACAO.md)
+➡️ [Acesse o módulo completo](./pages/modulo1-seguranca/READMEmd)
 
 ---
 
@@ -33,7 +33,7 @@ Este guia reúne os principais temas que sustentam essa jornada:
 - **Aplicação prática**: consentimento informado, anonimização, direitos dos titulares.  
 - **Exemplos**: plataformas de saúde que protegem dados de pacientes, sistemas educacionais que garantem privacidade de alunos.  
 
-➡️ [Acesse o módulo completo](./DIREITOS_TITULARES.md)
+➡️ [Acesse o módulo completo](./pages/modulo2-lgpd/README.md)
 
 ---
 
@@ -42,7 +42,7 @@ Este guia reúne os principais temas que sustentam essa jornada:
 - **Aplicação prática**: transparência ativa (divulgação espontânea) e passiva (resposta a pedidos).  
 - **Exemplos**: Portal da Transparência, relatórios de execução orçamentária, dados de licitações.  
 
-➡️ [Acesse o módulo completo](./OBRIGACOES.md)
+➡️ [Acesse o módulo completo](./pages/modulo3-lai/README.md)
 
 ---
 
@@ -51,7 +51,7 @@ Este guia reúne os principais temas que sustentam essa jornada:
 - **Aplicação prática**: inteligência artificial, blockchain, cidades inteligentes, govtech.  
 - **Exemplos**: Gov.br, SUS Digital, Estônia e-Government, IA em análise de políticas públicas.  
 
-➡️ [Acesse o módulo completo](./TRANSFORMACAO_DIGITAL.md)
+➡️ [Acesse o módulo completo](./pages/modulo4-inovacao/README.md)
 
 ---
 
