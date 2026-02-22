@@ -62,13 +62,3 @@ A LAI se aplica a:
 - [Controladoria-Geral da União (CGU)](https://www.gov.br/cgu/pt-br/assuntos/transparencia-publica/lei-de-acesso-a-informacao)  
 
 ---
-
-## 🛠️ Contribuições
-
-Sinta-se à vontade para abrir **issues** ou enviar **pull requests** com melhorias, correções ou novos conteúdos relacionados à LAI.
-
----
-
-## 📜 Licença
-
-Este projeto está sob a licença [MIT](LICENSE).
