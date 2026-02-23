@@ -5,9 +5,9 @@ h2 {
 
 /* Aumentar largura apenas quando o sidebar está visível */
 .sidebar:not(.hidden) {
-  width: 320px !important;
+  width: 400px !important;
 }
 
 .sidebar:not(.hidden) + .content {
-  left: 320px !important;
+  left: 400px !important;
 }
