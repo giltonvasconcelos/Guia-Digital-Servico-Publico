@@ -22,7 +22,7 @@
     <meta property="og:url" content=" https://giltonvasconcelos.github.io/Guia-Digital-Servico-Publico" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Guia Digital Serviço Público" />
-    <meta property="og:type" content="https://giltonvasconcelos.github.io/Guia-Digital-Servico-Publico" />
+    <meta property="og:type" content="website " />
     <meta property="og:image" content="/public/img/metatag.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="791" />
@@ -84,10 +84,16 @@
     <main id="app"></main>
 
     <!-- Botão de menu com ícone de casa (Home) -->
-    <a href="/" class="home-button" title="Página inicial">
-      <i class="fas fa-home"></i>
-    </a>
+ <a href="#" id="home-button" class="home-button" title="Página inicial">
+  <i class="fas fa-home"></i>
+</a>
 
+    <script>
+  document.getElementById('home-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'https://giltonvasconcelos.github.io/Guia-Digital-Servico-Publico';
+  });
+</script>
     <script>
       window.$docsify = {
       name: '<span>Guia Digital </span>Serviço Público',
