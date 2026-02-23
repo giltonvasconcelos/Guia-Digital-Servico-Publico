@@ -127,13 +127,7 @@
       .markdown-section {
         padding: 20px !important;
       }
-      
-      .menu-toggle {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-      }
-      
+          
       /* Sidebar começa fechada no mobile */
       body:not(.sidebar-collapsed) .sidebar {
         transform: translateX(-280px);
@@ -169,29 +163,7 @@
         noData: 'Nada encontrado'
       },
       
-      // Plugin para atualizar estado
-      plugins: [
-        function(hook, vm) {
-          hook.doneEach(function() {
-            // Verifica se é mobile e ajusta
-            if (window.innerWidth <= 768) {
-              document.body.classList.add('sidebar-collapsed');
-              document.getElementById('menuToggle').innerHTML = '☰';
-            }
-          });
-        }
-      ]
-    };
-
-    // FUNÇÃO PARA ALTERNAR SIDEBAR (ABRIR/FECHAR)
-    function toggleSidebar() {
-      document.body.classList.toggle('sidebar-collapsed');
-      const collapsed = document.body.classList.contains('sidebar-collapsed');
-      localStorage.setItem('sidebar-collapsed', collapsed);
-      
-      const menuToggle = document.getElementById('menuToggle');
-      menuToggle.innerHTML = collapsed ? '☰' : '✕';
-    }
+     }
 
     // FUNÇÃO PARA VOLTAR AO MENU PRINCIPAL
     function goHome() {
@@ -202,19 +174,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       const collapsed = localStorage.getItem('sidebar-collapsed') === 'true';
       
-      // No mobile, sempre começa fechada
-      if (window.innerWidth <= 768) {
-        document.body.classList.add('sidebar-collapsed');
-        document.getElementById('menuToggle').innerHTML = '☰';
-      } else {
-        if (collapsed) {
-          document.body.classList.add('sidebar-collapsed');
-          document.getElementById('menuToggle').innerHTML = '☰';
-        } else {
-          document.getElementById('menuToggle').innerHTML = '✕';
-        }
-      }
-    });
+        });
 
     // FECHA SIDEBAR AO CLICAR EM LINK NO MOBILE
     document.addEventListener('click', function(e) {
