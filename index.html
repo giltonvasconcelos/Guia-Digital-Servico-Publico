@@ -1,322 +1,165 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔐 Proteção de Dados no Setor Público</title>
-  
-  <!-- Docsify Theme -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  
-  <style>
-    /* ===== VARIÁVEIS ===== */
-    :root {
-      --primary: #1a3b5d;
-      --primary-dark: #0f2a44;
-      --accent: #ffd966;
-      --sidebar-width: 350px;
-      --transition: all 0.3s ease;
-    }
+/* ============================================================
+   1. ESTRUTURA E COMPORTAMENTO NATIVO (DOCSIFY)
+   ============================================================ */
 
-    /* ===== sidebar COM TOGGLE ===== */
-    .sidebar {
-      width: var(--sidebar-width) !important;
-      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
-      transition: transform 0.3s ease !important;
-      position: fixed !important;
-      left: 0;
-      top: 0;
-      height: 100vh;
-      z-index: 1000;
-      box-shadow: 4px 0 15px rgba(0,0,0,0.2);
-    }
-
-    /* Estado colapsado (escondido) */
-    body.sidebar-collapsed .sidebar {
-      transform: translateX(calc(-1 * var(--sidebar-width))) !important;
-    }
-
-    body.sidebar-collapsed .content {
-      margin-left: 0 !important;
-    }
-
-    /* Conteúdo principal */
-    .content {
-      transition: margin-left 0.3s ease !important;
-      margin-left: var(--sidebar-width) !important;
-    }
-
-    /* ===== BOTÃO DE MENU (HAMBURGER) ===== 
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 50px;
-      height: 50px;
-      background: var(--primary);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 1100;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      border: 3px solid var(--accent);
-      font-size: 1.5rem;
-      transition: var(--transition);
-    }
-
-    .menu-toggle:hover {
-      background: var(--primary-dark);
-      transform: scale(1.1);
-    }*/
-
-
-    /* Quando o menu está fechado (Estado Collapsed) */
-body.close .sidebar-toggle {
-    left: 20px !important;    /* Distância da esquerda */
-    bottom: 30px !important;  /* Distância do fundo */
-    right: auto !important;   /* Cancela o 'right' para não esticar */
-    top: auto !important;     /* Cancela o 'top' se houver */
-    width: 50px !important;   /* Tamanho fixo da bolinha */
-    height: 50px !important;
-    background: var(--accent) !important; /* Cor de destaque */
-    color: var(--primary) !important;     /* Cor do ícone */
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+:root {
+  --primary: #1a3b5d;
+  --primary-dark: #0f2a44;
+  --accent: #ffd966;
+  --sidebar-width: 350px;
 }
-    /* Botão quando sidebar está oculta 
-    body.sidebar-collapsed .menu-toggle {
-      left: 20px;
-      bottom: 30px;
-      right: 10px;
-      width: 40px;
-      height: 40px;
-      background: var(--accent);
-      color: var(--primary);
-    }*/
 
-    /* ===== BOTÃO HOME ===== */
-    .home-button {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 60px;
-      height: 60px;
-      background: var(--primary);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 1100;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      border: 3px solid var(--accent);
-      font-size: 1.8rem;
-      transition: var(--transition);
-    }
+/* Sidebar Fixa no Desktop */
+@media (min-width: 769px) {
+  .sidebar {
+    width: var(--sidebar-width) !important;
+    top: 0 !important;
+    padding-top: 0 !important;
+  }
+  body:not(.close) .content {
+    margin-left: var(--sidebar-width) !important;
+  }
+  .sidebar-toggle {
+    display: none !important; /* Esconde botão no PC */
+  }
+}
 
-    .home-button:hover {
-      background: var(--primary-dark);
-      transform: scale(1.1) translateY(-5px);
-    }
+/* Ajustes Críticos para Celular (Mobile) */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-top: 20px !important;
+  }
 
-    /* ===== PERSONALIZAÇÃO DA sidebar ===== */
-    .sidebar .app-name {
-      background: rgba(0, 0, 0, 0.3) !important;
-      padding: 30px 20px !important;
-      border-bottom: 3px solid var(--accent) !important;
-      text-align: center;
-    }
+  .sidebar {
+    width: 280px !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    transform: translateX(-280px) !important; /* Começa fechado */
+    transition: transform 0.3s ease !important;
+    z-index: 1000 !important;
+  }
 
-    .sidebar .app-name a {
-      color: white !important;
-      font-size: 1.5rem !important;
-      text-decoration: none;
-    }
+  /* Quando o Docsify abre o menu (remove a classe .close) */
+  body:not(.close) .sidebar {
+    transform: translateX(0) !important;
+  }
 
-    .sidebar .app-name a span {
-      font-weight: 700;
-      color: var(--accent);
-    }
+  /* O BOTÃO "BOLINHA" NO CANTO INFERIOR */
+  .sidebar-toggle {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 20px !important;
+    top: auto !important;
+    width: 55px !important;
+    height: 55px !important;
+    background: var(--accent) !important;
+    border: 3px solid var(--primary) !important;
+    border-radius: 50% !important;
+    z-index: 1100 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .sidebar .sidebar-nav {
-      padding: 20px 15px !important;
-    }
+  /* Os 3 risquinhos (☰) dentro da bolinha */
+  .sidebar-toggle span {
+    background-color: var(--primary) !important;
+    width: 25px !important;
+    height: 3px !important;
+    left: 15px !important;
+    margin: 4px 0 !important;
+    display: block !important;
+  }
+}
 
-    /* Títulos dos módulos */
-    .sidebar ul li p {
-      color: var(--accent) !important;
-      font-weight: 700 !important;
-      font-size: 1.1rem !important;
-      margin: 30px 0 15px 0 !important;
-      padding-bottom: 8px !important;
-      border-bottom: 2px solid rgba(255, 215, 0, 0.3) !important;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+/* ============================================================
+   2. ESTILO VISUAL (CORES E FONTES)
+   ============================================================ */
 
-    /* Itens do menu */
-    .sidebar ul li a {
-      color: rgba(255, 255, 255, 0.9) !important;
-      border-left: 4px solid transparent !important;
-      padding: 12px 15px 12px 25px !important;
-      margin: 5px 0 !important;
-      transition: var(--transition) !important;
-      font-size: 1rem !important;
-      border-radius: 0 8px 8px 0 !important;
-    }
+.sidebar {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+  border: none !important;
+  color: white;
+}
 
-    .sidebar ul li a:hover {
-      color: var(--accent) !important;
-      border-left-color: var(--accent) !important;
-      background: rgba(255, 215, 0, 0.15) !important;
-      padding-left: 35px !important;
-    }
+/* Nome do App no Topo */
+.sidebar .app-name {
+  background: rgba(0, 0, 0, 0.2) !important;
+  padding: 30px 20px !important;
+  border-bottom: 2px solid var(--accent) !important;
+  margin-top: 0 !important;
+}
 
-    .sidebar ul li.active > a {
-      color: var(--accent) !important;
-      border-left-color: var(--accent) !important;
-      background: rgba(255, 215, 0, 0.2) !important;
-      font-weight: 600 !important;
-    }
+.sidebar .app-name a {
+  color: white !important;
+  font-size: 1.4rem !important;
+  font-weight: 700;
+}
 
-    /* ===== CONTEÚDO ===== */
-    .markdown-section {
-      max-width: 1000px !important;
-      padding: 40px 60px !important;
-      margin: 30px auto !important;
-    }
+/* Links da Sidebar */
+.sidebar ul li a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 16px !important;
+  padding: 12px 15px 12px 25px !important;
+  transition: all 0.3s;
+}
 
-    .markdown-section h1 {
-      color: var(--primary) !important;
-      border-bottom: 4px solid var(--accent) !important;
-      padding-bottom: 15px !important;
-      margin-bottom: 30px !important;
-    }
+.sidebar ul li a:hover, 
+.sidebar ul li.active > a {
+  color: var(--accent) !important;
+  background: rgba(255, 215, 0, 0.1) !important;
+  border-left: 4px solid var(--accent) !important;
+}
 
-    /* ===== RESPONSIVIDADE ===== */
-    @media (max-width: 768px) {
-      :root {
-        --sidebar-width: 280px;
-      }
-      
-      .markdown-section {
-        padding: 20px !important;
-      }
-      
-      .menu-toggle {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-      }
-      
-      /* sidebar começa fechada no mobile */
-      body:not(.sidebar-collapsed) .sidebar {
-        transform: translateX(-280px);
-      }
-      
-      body:not(.sidebar-collapsed) .content {
-        margin-left: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div id="app"></div>
+/* Títulos de Módulos na Sidebar */
+.sidebar ul li p {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  margin: 25px 0 10px 0 !important;
+  padding: 0 15px !important;
+}
 
-  <!-- Botão do Menu (Hamburger) 
-  <div class="menu-toggle" onclick="togglesidebar()" id="menuToggle">
-    ☰
-  </div> -->
+/* ============================================================
+   3. CONTEÚDO PRINCIPAL (TABELAS E TEXTOS)
+   ============================================================ */
 
-  <!-- Botão Home -->
-  <div class="home-button" onclick="goHome()">
-    🏠
-  </div>
+body {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
 
-  <script>
-    // CONFIGURAÇÃO DO DOCSIFY
-   window.$docsify = {
-  name: '<span>Guia Digital </span>Serviço Público',
-  repo: '',
-  loadsidebar: true,      // Mude de 'sidebar.md' para true (o padrão do Docsify)
-  subMaxLevel: 0,         // Mude para 0 para ELIMINAR o menu duplicado automático
-  auto2top: true,
-  relativePath: true,
-  homepage: 'README.md',  // Certifique-se que o nome do arquivo está correto
-  // ... restanto das configs
-      
-      search: {
-        placeholder: '🔍 Pesquisar...',
-        noData: 'Nada encontrado'
-      },
-      
-      // Plugin para atualizar estado
-      plugins: [
-        function(hook, vm) {
-          hook.doneEach(function() {
-            // Verifica se é mobile e ajusta
-            if (window.innerWidth <= 768) {
-              document.body.classList.add('sidebar-collapsed');
-              document.getElementById('menuToggle').innerHTML = '☰';
-            }
-          });
-        }
-      ]
-    };
+.markdown-section {
+  max-width: 1000px !important;
+  padding: 40px 60px !important;
+}
 
-    // FUNÇÃO PARA ALTERNAR sidebar (ABRIR/FECHAR)
-    function togglesidebar() {
-      document.body.classList.toggle('sidebar-collapsed');
-      const collapsed = document.body.classList.contains('sidebar-collapsed');
-      localStorage.setItem('sidebar-collapsed', collapsed);
-      
-      const menuToggle = document.getElementById('menuToggle');
-      menuToggle.innerHTML = collapsed ? '☰' : '✕';
-    }
+.markdown-section h1 {
+  color: var(--primary) !important;
+  border-bottom: 4px solid var(--accent) !important;
+  padding-bottom: 10px;
+}
 
-    // FUNÇÃO PARA VOLTAR AO MENU PRINCIPAL
-    function goHome() {
-      window.location.hash = '#/';
-    }
+.markdown-section table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 20px 0;
+}
 
-    // ESTADO INICIAL DA sidebar
-    document.addEventListener('DOMContentLoaded', function() {
-      const collapsed = localStorage.getItem('sidebar-collapsed') === 'true';
-      
-      // No mobile, sempre começa fechada
-      if (window.innerWidth <= 768) {
-        document.body.classList.add('sidebar-collapsed');
-        document.getElementById('menuToggle').innerHTML = '☰';
-      } else {
-        if (collapsed) {
-          document.body.classList.add('sidebar-collapsed');
-          document.getElementById('menuToggle').innerHTML = '☰';
-        } else {
-          document.getElementById('menuToggle').innerHTML = '✕';
-        }
-      }
-    });
+.markdown-section th {
+  background: var(--primary) !important;
+  color: white !important;
+  padding: 12px;
+}
 
-    // FECHA sidebar AO CLICAR EM LINK NO MOBILE
-    document.addEventListener('click', function(e) {
-      if (window.innerWidth <= 768 && e.target.tagName === 'A') {
-        setTimeout(() => {
-          document.body.classList.add('sidebar-collapsed');
-          document.getElementById('menuToggle').innerHTML = '☰';
-        }, 300);
-      }
-    });
-  </script>
+.markdown-section td {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
 
-  <!-- Scripts do Docsify -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/emoji.min.js"></script>
-</body>
-</html>
+/* Esconde qualquer resquício do menu-toggle manual */
+.menu-toggle { display: none !important; }
