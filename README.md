@@ -8,7 +8,8 @@ Este material foi desenvolvido para apoiar gestores, servidores e cidadãos na c
 Antes de mergulhar nos módulos, que tal conhecer a visão geral do nosso conteúdo?  
 Baixe o **E-book de Apresentação do Curso** e entenda como a transformação digital pode revolucionar o serviço público, com exemplos práticos, desafios e oportunidades.
 
-➡️ [**Clique aqui para acessar o E-book**](#) *(substitua pelo link real do e-book)*
+➡️ [**Clique aqui para acessar o E-book**](#) *(https://github.com/giltonvasconcelos/Projeto-E-book-FIO-Universia-Bootcamp/blob/main/output/ebook.pdf)*
+
 
 ---
 
